@@ -1,6 +1,6 @@
 {
-  "name": "koa-joi-router",
-  "version": "5.1.0",
+  "name": "@nook/koa-joi-router",
+  "version": "5.2.0",
   "description": "Configurable, input validated routing for koa.",
   "main": "joi-router.js",
   "keywords": [
@@ -22,16 +22,16 @@
   "engines": {
     "node": ">= 7.6.0"
   },
-  "author": "Aaron Heckmann <aaron.heckmann+github@gmail.com>",
+  "author": "Nook Scheel <nook@live.ru>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/koajs/joi-router.git"
+    "url": "https://github.com/nooks/joi-router.git"
   },
   "bugs": {
-    "url": "https://github.com/koajs/joi-router/issues"
+    "url": "https://github.com/nooks/joi-router/issues"
   },
-  "homepage": "https://github.com/koajs/joi-router",
+  "homepage": "https://github.com/nooks/joi-router",
   "dependencies": {
     "await-busboy": "1.0.1",
     "clone": "2.1.1",

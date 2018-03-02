@@ -261,7 +261,9 @@ function makeBodyParser(spec) {
             limit: spec.validate.maxBody
           };
 
-          ctx.request.body = await parse.json(ctx, opts);
+          if (!ctx.request.body) {
+            ctx.request.body = await parse.json(ctx, opts);
+          }
           break;
 
         case 'form':
@@ -273,7 +275,9 @@ function makeBodyParser(spec) {
             limit: spec.validate.maxBody
           };
 
-          ctx.request.body = await parse.form(ctx, opts);
+          if (!ctx.request.body) {
+            ctx.request.body = await parse.form(ctx, opts);
+          }
           break;
 
         case 'stream':
@@ -285,7 +289,9 @@ function makeBodyParser(spec) {
           opts = spec.validate.multipartOptions || {}; // TODO document this
           opts.autoFields = true;
 
-          ctx.request.parts = busboy(ctx, opts);
+          if (!ctx.request.parts) {
+            ctx.request.parts = busboy(ctx, opts);
+          }
           break;
       }
     } catch (err) {
